@@ -1,5 +1,5 @@
 <?php
-    // include 'partials/dbconn_.php';
+    include 'partials/dbconn_.php';
 
     $email = $_POST["email"];
     $uname = $_POST["uname"];

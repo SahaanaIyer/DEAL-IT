@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // include 'partials/dbconn.php';
+    include 'partials/dbconn.php';
     $alert = false;
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];

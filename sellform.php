@@ -309,7 +309,7 @@ if (!isset($_SESSION['loggedin']) || ($_SESSION['loggedin'] != true)) {
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // include 'partials/db_conn.php';
+    include 'partials/db_conn.php';
 
     $category = $_POST["category"];
     $title = $_POST["title"];

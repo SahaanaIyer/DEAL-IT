@@ -1,8 +1,8 @@
 <?php
     session_start();
     
-    // include 'partials/dbconn.php';
-    // include 'partials/dbconn_rev.php';
+    include 'partials/dbconn.php';
+    include 'partials/dbconn_rev.php';
     
     $uname = $_SESSION['username'];
     $msg = $_POST["revmsg"];

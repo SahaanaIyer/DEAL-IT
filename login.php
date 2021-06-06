@@ -1,7 +1,7 @@
 <?php
 $login = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // include 'partials/dbconn.php';
+  include 'partials/dbconn.php';
   $username = $_POST["uname"];
   $password = $_POST["passw"];
 

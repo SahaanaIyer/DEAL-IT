@@ -1,5 +1,5 @@
 <?php
-    // include 'partials/dbconn_.php';
+    include 'partials/dbconn_.php';
     
     $tab = "SELECT name FROM tablename WHERE id=1";
     $res = mysqli_query($conn_, $tab);

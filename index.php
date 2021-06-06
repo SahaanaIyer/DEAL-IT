@@ -1,9 +1,9 @@
 <?php
 session_start();
 error_reporting(0);
-// include 'partials/db_conn.php';
-// include 'partials/dbconn_.php';
-// include 'partials/dbconn_rev.php';
+include 'partials/db_conn.php';
+include 'partials/dbconn_.php';
+include 'partials/dbconn_rev.php';
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ error_reporting(0);
                     <a class="nav-link fabtheme-nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <form class="search form-inline my-2 my-lg-0" action="#products" method="get">
+            <form class="search form-inline my-2 my-lg-0" action="http://localhost/wt_semifinal/index.php#products" method="get">
                 <div class="sebutton">
                     <input type="search" name="search" id="search" center placeholder="Search..." style="padding-left: 22px;">
                     <a href="search.php"><button type="submit" name="searchbar" id="searchbar" class="fa fa-search bttn" style="background-color: transparent; border-color: white; background-image: none;"> </button></a>
@@ -139,7 +139,7 @@ error_reporting(0);
                 <div class="fade show active" id="all" role="tabpanel" aria-labelledby="all-tab"><br>
                     <div class="inl">
                         <h1 style="font-size: 210%; width: 60%;">Available Products</h1>
-                        <form action="#products" method="post" class="sort">
+                        <form action="http://localhost/wt_semifinal/index.php#products" method="post" class="sort">
                             <select class="filter" name="filter" value="filter">
                                 <option selected>Filter..</option>
                                 <option name="old" value="old">Old to New</option>
@@ -149,7 +149,7 @@ error_reporting(0);
                         </form>
                     </div>
                     <div class="mb-5">
-                        <form action="#products" method="post" class="filteration">
+                        <form action="http://localhost/wt_semifinal/index.php#products" method="post" class="filteration">
                             <div id="myBtnContainer">
                                 <button class="btn" type="submit" name="all" id="all"> Show All</button>
                                 <button class="btn" type="submit" name="ed" id="ed"> Engineering Drawing</button>
