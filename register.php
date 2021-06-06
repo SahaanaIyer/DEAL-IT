@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partials/dbconn.php';
+    // include 'partials/dbconn.php';
     $alert = false;
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
@@ -9,15 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["email"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
-    // $exists = false;
     $existsSql = "SELECT * from users where email='$username'";
     $result = mysqli_query($conn, $existsSql);
     $numRowsExist = mysqli_num_rows($result);
     if ($numRowsExist > 0)
         echo "Username Already Exists";
-    //   $exists = true;
     else {
-        // $exists = false;
         if ($password == $cpassword) {
             $hash = password_hash($password, PASSWORD_BCRYPT);
             $sql = "INSERT INTO users (fname, lname, contact, email, password, date) VALUES ('$fname', '$lname', '$contact', '$username', '$hash', current_timestamp())";

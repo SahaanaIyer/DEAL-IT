@@ -1,6 +1,6 @@
 <?php
-    include 'partials/db_conn.php';
-    include 'partials/dbconn_.php';
+    // include 'partials/db_conn.php';
+    // include 'partials/dbconn_.php';
     
     $sr_no = $_POST["sr_no"];
     $sql = "DELETE FROM sellform WHERE sr_no=$sr_no";

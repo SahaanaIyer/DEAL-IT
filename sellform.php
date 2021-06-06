@@ -308,15 +308,13 @@ if (!isset($_SESSION['loggedin']) || ($_SESSION['loggedin'] != true)) {
 </html>
 
 <?php
-// session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partials/db_conn.php';
+    // include 'partials/db_conn.php';
 
     $category = $_POST["category"];
     $title = $_POST["title"];
     $descr = $_POST["descr"];
     $price = $_POST["price"];
-    // $image = addslashes(file_get_contents($_FILES["file"]["tmp_name"]));
     $image = $_FILES['file']['name'];
     $dst = "./img/" . $image;
     $dst1 = "img/" . $image;
