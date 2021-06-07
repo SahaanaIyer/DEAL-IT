@@ -61,7 +61,7 @@ include 'partials/dbconn_rev.php';
                     <a class="nav-link fabtheme-nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <form class="search form-inline my-2 my-lg-0" action="http://localhost/wt_semifinal/index.php#products" method="get">
+            <form class="search form-inline my-2 my-lg-0" action="http://localhost/DEAL-IT/index.php#products" method="get">
                 <div class="sebutton">
                     <input type="search" name="search" id="search" center placeholder="Search..." style="padding-left: 22px;">
                     <a href="search.php"><button type="submit" name="searchbar" id="searchbar" class="fa fa-search bttn" style="background-color: transparent; border-color: white; background-image: none;"> </button></a>
@@ -139,7 +139,7 @@ include 'partials/dbconn_rev.php';
                 <div class="fade show active" id="all" role="tabpanel" aria-labelledby="all-tab"><br>
                     <div class="inl">
                         <h1 style="font-size: 210%; width: 60%;">Available Products</h1>
-                        <form action="http://localhost/wt_semifinal/index.php#products" method="post" class="sort">
+                        <form action="http://localhost/DEAL-IT/index.php#products" method="post" class="sort">
                             <select class="filter" name="filter" value="filter">
                                 <option selected>Filter..</option>
                                 <option name="old" value="old">Old to New</option>
@@ -149,7 +149,7 @@ include 'partials/dbconn_rev.php';
                         </form>
                     </div>
                     <div class="mb-5">
-                        <form action="http://localhost/wt_semifinal/index.php#products" method="post" class="filteration">
+                        <form action="http://localhost/DEAL-IT/index.php#products" method="post" class="filteration">
                             <div id="myBtnContainer">
                                 <button class="btn" type="submit" name="all" id="all"> Show All</button>
                                 <button class="btn" type="submit" name="ed" id="ed"> Engineering Drawing</button>
@@ -994,7 +994,7 @@ include 'partials/dbconn_rev.php';
                                                             <button type="button" class="viewchats" id="viewchats"><i class="fa fa-comment fa-3x" aria-hidden="true" id="vc_<?php echo $row['sr_no']; ?>" onclick="hello('<?php echo $row['sr_no']; ?>')"></i></button>
                                                             <button class="but" type="button" id="<?php echo $row['sr_no']; ?>" onclick="delete_prod('<?php echo $row['sr_no']; ?>')"> DELETE POST </button>
 
-                                                            <?php $count_no_of_chats = 0;   ?>
+                                                            <?php $count_no_of_chats = 0; ?>
                                                             <div id="myModal_<?php echo $row['sr_no']; ?>" class="modal">
                                                                 <div class="modal-content modalpara">
                                                                     <?php $conn_users = mysqli_connect("localhost", "root", "", "users");
@@ -1012,7 +1012,7 @@ include 'partials/dbconn_rev.php';
                                                                             <tr>
                                                                                 <td rowspan="4"><img src="<?php echo $row['image']; ?>" class="modal-img"></td>
                                                                                 <td>Title : <?php echo $row["title"]; ?></td>
-                                                                                <td><span rowspan="4" class="close modalclose_<?php echo $row['sr_no']; ?>">&times;</span></td>
+                                                                                <td rowspan="4"><span class="close modalclose_<?php echo $row['sr_no']; ?>">&times;</span></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>Description : <?php echo $row["description"]; ?></td>
@@ -1050,13 +1050,9 @@ include 'partials/dbconn_rev.php';
                                                                                                 <tr>
                                                                                                     <td rowspan="3"><span class="numbering"><?php echo $count_no_of_chats; ?></span></td>
                                                                                                     <td><span class="buyer-name">Chats from <?php echo $name_of_buyer;  ?> </span></td>
-
-
                                                                                                 </tr>
                                                                                                 <tr>
-
                                                                                                     <td><span class="buyer-name"><?php echo $buyer_fname . " " . $buyer_lname;  ?></span></td>
-
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td></td>
@@ -1255,6 +1251,7 @@ include 'partials/dbconn_rev.php';
                         <?php       }        ?>
                         <?php if (!isset($_SESSION['loggedin']) || ($_SESSION['loggedin'] != true)) {
                         } else {  ?>
+                            <br><br><br>
                             <button type="button" class="btn fabtheme-button rev-btn" onclick="openreview()">Add Review</button><br>
                         <?php       }       ?>
                         <span class="review-form" id="review-form">
@@ -1285,7 +1282,6 @@ include 'partials/dbconn_rev.php';
                                     }
                                     ?>
                                 </span>
-                                <!-- </span> -->
                             </form>
                         </span>
                     </div>
